@@ -1,5 +1,17 @@
 # Mobile Development Workshop 2022
 
+
+## Prerequisities
+Below are instructions to get setup with flutter before the workshop with your respective operating system. 
+
+- [MacOS](#macos)
+- [Windows](#windows)
+
+Then proceed with vscode extension installation instructions
+- [VSCode setup](#vs-code-configuration)
+
+If you run into problems feel free to either get help at the start of the workshop or reach out earlier. 
+
 ## Flutter Installation
 
 ### MacOS
