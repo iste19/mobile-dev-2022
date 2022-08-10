@@ -2,32 +2,30 @@
 
 A Flutter project.
 
-## Resources 
+## Resources
 
 ### Download the Font Files
 
-Grab the font files from https://drive.google.com/file/d/1BVvL149gPGjIWf3pv961Fk6xb46to7FI/view?usp=sharing 
+Grab the font files from https://drive.google.com/file/d/1BVvL149gPGjIWf3pv961Fk6xb46to7FI/view?usp=sharing
 
 ##### Code for pubspec.yaml
+
 ```yaml
-  fonts:
-    - family: Pacifico
-      fonts:
-        - asset: fonts/Pacifico-Regular.ttf
+fonts:
+  - family: Pacifico
+    fonts:
+      - asset: fonts/Pacifico-Regular.ttf
 ```
-
-
-
 
 ### Download the assets files
 
-Grab the asset files from https://drive.google.com/file/d/1A8aFJsWLo_SidCiF1_2n1ZQ1ecvQLNgw/view?usp=sharing 
-
+Grab the asset files from https://drive.google.com/file/d/1A8aFJsWLo_SidCiF1_2n1ZQ1ecvQLNgw/view?usp=sharing
 
 ##### Code for pubspec.yaml
+
 ```yaml
-  assets:
-    - assets/images/
+assets:
+  - assets/images/
 ```
 
 ##### Code for custom Card
@@ -53,7 +51,6 @@ Grab the asset files from https://drive.google.com/file/d/1A8aFJsWLo_SidCiF1_2n1
             ),
           ),
 ```
-
 
 ##### Code for Game Class
 
@@ -94,4 +91,28 @@ const Color(0xFF3A405A),
 const Color(0xFF99B2DD),
 ```
 
+##### Logic for showing images
 
+```dart
+                              image: AssetImage((() {
+                                if (game.isCardFlipped[index] == true ||
+                                    game.selectedCards.contains(index)) {
+                                  return game.cardPaths[index];
+                                } else {
+                                  return game.questionCardPath;
+                                }
+                              })()),
+```
+
+##### Logic for Hiding Cards after 250 milliseconds
+
+```dart
+
+                              Future.delayed(const Duration(milliseconds: 250),
+                                  () {
+                                setState(() {
+                                  game.selectedCards.clear();
+                                });
+                              });
+
+```
