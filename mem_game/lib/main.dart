@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mem_game/components/custom_card.dart';
 import 'package:mem_game/game.dart';
+import 'package:mem_game/widgets/custom_card.dart';
+import 'package:mem_game/widgets/header.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,17 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(
             height: 30,
           ),
-          const Center(
-            child: Text(
-              "Mem Game",
-              style: TextStyle(
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontFamily: 'Pacifico',
-              ),
-            ),
-          ),
+          const Header(),
           Expanded(
             child: Center(
               child: AspectRatio(
@@ -136,8 +127,8 @@ class _HomeScreenState extends State<HomeScreen> {
             //mainAxisAlignment: MainAxisAlignment.spaceAround,
             //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              customCard("Turns", "$turns"),
-              customCard("Pairs Found", "$pairsFound"),
+              CustomCard("Turns", "$turns"),
+              CustomCard("Pairs Found", "$pairsFound"),
             ],
           ),
         ],
