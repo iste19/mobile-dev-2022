@@ -113,6 +113,18 @@ flutter --version
  
 <img src="./readme/9.jpg" width=50% height=50%>
 
+Installing flutters dependencies.
+
+Flutter requires some dependences on other libraries e.g. android sdk. To find out what to install run:
+
+```
+flutter doctor -v
+```
+
+e.g. ![image](https://user-images.githubusercontent.com/43104158/183795001-aee0f20c-c264-4212-96b6-272f2ca2351c.png)
+
+For each [X], resolve the dependency by installing the suggested tools.
+
 ## VS Code Configuration
 
 1 Install Visual Studio Code
