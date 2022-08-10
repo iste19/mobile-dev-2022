@@ -1,45 +1,52 @@
 # Mobile Development Workshop 2022
 
-
 ## Prerequisities
-Below are instructions to get setup with flutter before the workshop with your respective operating system. 
+
+Below are instructions to get setup with flutter before the workshop with your respective operating system.
 
 - [MacOS](#macos)
 - [Windows](#windows)
 
 Then proceed with vscode extension installation instructions
+
 - [VSCode setup](#vs-code-configuration)
 
-If you run into problems feel free to either get help at the start of the workshop or reach out earlier. 
+If you run into problems feel free to either get help at the start of the workshop or reach out earlier.
 
 ## Flutter Installation
 
 ### MacOS
 
 #### Customised Way
+
 The lazy way may not apply to you if you wish to do some customisation of the installation process such as you wish to use `flutter` as a global command.
 
 Please visit https://docs.flutter.dev/get-started/install/macos for more information.
 
 #### Lazy way
+
 The lazy way of installing flutter is to use the `mac_config.sh` script inside of this repo.
 
 The script basically does 3 things.
+
 1. Download the zip of Flutter SDK
 2. Unzip it to the current directory
 3. Add the SDK bin directory to the $PATH variable
 
 To run it, you need to first give an executable permission
+
 ```bash
 chmod +x ./mac_config.sh
 ```
 
 Then you can run the script
+
 ```bash
 sh ./mac_config.sh
 ```
 
-Notice this way sets your PATH variable for the current terminal window only, please look at the ***Customised Way*** for global `flutter` command usage. Everytime you restart the terminal you need to retype the following command again.
+Notice this way sets your PATH variable for the current terminal window only, please look at the **_Customised Way_** for global `flutter` command usage. Everytime you restart the terminal you need to retype the following command again.
+
 ```bash
 export PATH="$PATH:`pwd`/flutter/bin"
 ```
@@ -48,7 +55,7 @@ export PATH="$PATH:`pwd`/flutter/bin"
 
 **Step 1**
 
- Download the flutter SDK from https://docs.flutter.dev/get-started/install/windows and unzip it
+Download the flutter SDK from https://docs.flutter.dev/get-started/install/windows and unzip it
 
 <img src="./readme/1.JPG" width=50% height=50%>
 
@@ -78,7 +85,7 @@ Under User variables check if there is an entry called Path.
 
 <img src="./readme/5_1.jpg" width=50% height=50%>
 
-***Trick*** - the full path of **flutter\bin** can be copy from the address bar in the File Explorer
+**_Trick_** - the full path of **flutter\bin** can be copy from the address bar in the File Explorer
 
 <img src="./readme/6.gif" width=50% height=50%>
 
@@ -86,10 +93,12 @@ Under User variables check if there is an entry called Path.
 
 Check if adding successfully
 
-If you have configured it successfully, by typing 
+If you have configured it successfully, by typing
+
 ```bash
 flutter --version
 ```
+
 in the command prompt, you should be able to see the version information of flutter
 
 <img src="./readme/7.jpg" width=50% height=50%>
@@ -107,10 +116,11 @@ D:\DEVS\flutter_windows_3.0.5-stable\flutter\bin\flutter.bat --version
 ```
 
 is the same assets
+
 ```bat
 flutter --version
 ```
- 
+
 <img src="./readme/9.jpg" width=50% height=50%>
 
 Installing flutters dependencies.
@@ -135,3 +145,29 @@ Select the right edition of VS Code for your device from https://code.visualstud
 2. Install Flutter Extension
 
 <img src="./readme/10.gif" width=50% height=50%>
+
+## Optional
+
+### Android Setup
+
+1. Install Android Studio
+2. Enable Developer Options and USB Debugging on Android Device.
+3. Plug Phone Via USB
+4. Check if Flutter recognizes device using `flutter devices`
+5. Run the app using the Android Device.
+
+### IOS Simulator Setup
+
+1. Install XCode
+2. Run the following commands.
+
+```bash
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+sudo xcodebuild -runFirstLaunch
+```
+
+3. Open XCode once to sign licence agreement
+4. Run following command `open -a Simulator` to setup IOS Simulator
+5. Run the app using the IOS Simulator.
+
+Please visit https://docs.flutter.dev/get-started/install/macos for more information.
