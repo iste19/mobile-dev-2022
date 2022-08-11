@@ -27,6 +27,11 @@ Please visit https://docs.flutter.dev/get-started/install/macos for more informa
 
 The lazy way of installing flutter is to use the `mac_config.sh` script inside of this repo.
 
+##### Download the mac_config.sh file 
+
+Grab the mac_config.sh files from https://drive.google.com/file/d/1EFcpJpG1gCen4I31-xXxTMDhjCEdP6xu/view?usp=sharing
+
+
 The script basically does 3 things.
 
 1. Download the zip of Flutter SDK
